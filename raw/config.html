@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Adding new docs or new branches | Docs HOWTO | Elastic</title>
+<meta class="elastic" name="content" content="Adding new docs or new branches | Docs HOWTO">
+
+<link rel="home" href="index.html" title="Docs HOWTO"/>
+<link rel="up" href="build.html" title="Building documentation"/>
+<link rel="prev" href="pr-checks.html" title="Previewing the Elastic docs in pull requests"/>
+<link rel="next" href="asciidoc-guide.html" title="Asciidoc Guide"/>
+<meta class="elastic" name="product_version" content=""/>
+<meta class="elastic" name="product_name" content=""/>
+<meta class="elastic" name="website_area" content="documentation"/>
+<meta name="DC.type" content="Learn/Docs/"/>
+<meta name="DC.subject" content=""/>
+<meta name="DC.identifier" content=""/>
+</head>
+<body>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="/guide/">Elastic Docs</a></span>
+<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="index.html">Docs HOWTO</a></span>
+<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="build.html">Building documentation</a></span>
+</div>
+<div class="navheader">
+<span class="prev">
+<a href="pr-checks.html">« Previewing the Elastic docs in pull requests</a>
+</span>
+<span class="next">
+<a href="asciidoc-guide.html">Asciidoc Guide »</a>
+</span>
+</div>
+<div class="chapter">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="config"></a>Adding new docs or new branches<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>The documentation that appears on the <a href="http://www.elastic.co/guide" class="ulink" target="_top">http://www.elastic.co/guide</a>
+website is controlled by the
+<a href="https://github.com/elastic/docs/blob/master/conf.yaml" class="ulink" target="_top"><code class="literal">conf.yaml</code></a> file in the <code class="literal">docs</code> repo.</p>
+<p>You can add a new repository under the <code class="literal">repos</code> section, if it
+doesn&#8217;t already exist, and you can add a new "book" under the
+<code class="literal">contents</code> section.</p>
+<p>Each book contains a list of <code class="literal">branches</code> and we build a separate copy of each
+book for each of those <code class="literal">branches</code>. There is also a <code class="literal">current</code> branch which gets
+special treatment. When we fork a branch like 7.x or 7.9 we typically add
+it to the list of <code class="literal">branches</code> so we immediately start building docs for it while
+we&#8217;re actively developing against it. When we release a new minor or major
+version we update the <code class="literal">current</code> branch to point to that branch.</p>
+<div class="note admon">
+<div class="icon"></div>
+<div class="admon_content">
+<p>At this point changing <code class="literal">current</code> requires a full "rebuild" which we do
+by logging into the docs
+<a href="https://elasticsearch-ci.elastic.co/view/Docs/job/elastic+docs+master+build/" class="ulink" target="_top">build</a>
+clicking the "Build with Parameters" link, checking the "rebuild" option, and
+then starting the build.</p>
+</div>
+</div>
+<p>Each book may optionally contain a list of <code class="literal">live</code> branches. If the list is
+specified only branches that are in it are considered "living" and books that
+are not in the list will get a message at the top of each page saying that we
+don&#8217;t plan to release any more bug fixes or actively maintain the docs for that
+branch.</p>
+<p>If you want a branch to have a different "version" name (for instance, if you
+want to build a version called "4.2" but have it build out of a branch called
+"branch-for-4.2"), you can put <code class="literal">{branch-for-4.2: 4.2}</code> as an entry in the
+<code class="literal">branches</code> list. Everywhere else in <code class="literal">conf.yaml</code>, continue to use
+<code class="literal">branch-for-4.2</code>.</p>
+</div>
+<div class="navfooter">
+<span class="prev">
+<a href="pr-checks.html">« Previewing the Elastic docs in pull requests</a>
+</span>
+<span class="next">
+<a href="asciidoc-guide.html">Asciidoc Guide »</a>
+</span>
+</div>
+</div>
+</body>
+</html>

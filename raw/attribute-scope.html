@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Attribute scope | Docs HOWTO | Elastic</title>
+<meta class="elastic" name="content" content="Attribute scope | Docs HOWTO">
+
+<link rel="home" href="index.html" title="Docs HOWTO"/>
+<link rel="up" href="asciidoc-guide.html" title="Asciidoc Guide"/>
+<link rel="prev" href="shared-attributes.html" title="Shared attributes"/>
+<link rel="next" href="linking.html" title="Linking"/>
+<meta class="elastic" name="product_version" content=""/>
+<meta class="elastic" name="product_name" content=""/>
+<meta class="elastic" name="website_area" content="documentation"/>
+<meta name="DC.type" content="Learn/Docs/"/>
+<meta name="DC.subject" content=""/>
+<meta name="DC.identifier" content=""/>
+</head>
+<body>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="/guide/">Elastic Docs</a></span>
+<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="index.html">Docs HOWTO</a></span>
+<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="asciidoc-guide.html">Asciidoc Guide</a></span>
+</div>
+<div class="navheader">
+<span class="prev">
+<a href="shared-attributes.html">« Shared attributes</a>
+</span>
+<span class="next">
+<a href="linking.html">Linking »</a>
+</span>
+</div>
+<div class="chapter">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="attribute-scope"></a>Attribute scope<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>Attributes are in-scope for the entire book unless you explicitly clear them by
+setting <code class="literal">:!attributename:</code>. For example:</p>
+<div class="example">
+<p class="title"><strong>Example 5. Clearing an attribute</strong></p>
+<div class="example-contents">
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">:myattribute: some value
+All the things on the page.
+:!myattribute:</pre>
+</div>
+</div>
+</div>
+<p>To create page-scoped attributes, clear the attribute at the end of the page.</p>
+</div>
+<div class="navfooter">
+<span class="prev">
+<a href="shared-attributes.html">« Shared attributes</a>
+</span>
+<span class="next">
+<a href="linking.html">Linking »</a>
+</span>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Including files | Docs HOWTO | Elastic</title>
+<meta class="elastic" name="content" content="Including files | Docs HOWTO">
+
+<link rel="home" href="index.html" title="Docs HOWTO"/>
+<link rel="up" href="asciidoc-guide.html" title="Asciidoc Guide"/>
+<link rel="prev" href="blocks.html" title="Blocks"/>
+<link rel="next" href="changes.html" title="Additions and deprecations"/>
+<meta class="elastic" name="product_version" content=""/>
+<meta class="elastic" name="product_name" content=""/>
+<meta class="elastic" name="website_area" content="documentation"/>
+<meta name="DC.type" content="Learn/Docs/"/>
+<meta name="DC.subject" content=""/>
+<meta name="DC.identifier" content=""/>
+</head>
+<body>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="/guide/">Elastic Docs</a></span>
+<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="index.html">Docs HOWTO</a></span>
+<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="asciidoc-guide.html">Asciidoc Guide</a></span>
+</div>
+<div class="navheader">
+<span class="prev">
+<a href="blocks.html">« Blocks</a>
+</span>
+<span class="next">
+<a href="changes.html">Additions and deprecations »</a>
+</span>
+</div>
+<div class="chapter">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="includes"></a>Including files<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>For long documentation, you probably want to break up
+the Asciidoc files into smaller units, and just
+include them where appropriate:</p>
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">include::myfolder/mydoc.asciidoc[]</pre>
+</div>
+<p>Paths are relative to the file which
+contains the <code class="literal">include</code> statement.</p>
+<div class="section">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="cross-repo-includes"></a>Across repositories<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>If you have to include files in a different repository then use its <code class="literal">-root</code>
+attribute to locate the files:</p>
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">include::{elasticsearch-root}/docs/foo.asciidoc[]</pre>
+</div>
+<p>Books that reference another repository should register that reference in
+<a href="https://github.com/elastic/docs/blob/master/conf.yaml" class="ulink" target="_top"><code class="literal">conf.yaml</code></a>.</p>
+<div class="pre_wrapper lang-yaml">
+<pre class="programlisting prettyprint lang-yaml">  -
+    repo:   elasticsearch
+    path:   docs/foo.asciidoc</pre>
+</div>
+<p>The path should be as specific as possible because we skip rebuilding books if
+changes to the referenced repository don&#8217;t change the referenced path.</p>
+</div>
+
+</div>
+<div class="navfooter">
+<span class="prev">
+<a href="blocks.html">« Blocks</a>
+</span>
+<span class="next">
+<a href="changes.html">Additions and deprecations »</a>
+</span>
+</div>
+</div>
+</body>
+</html>

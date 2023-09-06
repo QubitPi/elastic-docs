@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Edit links | Docs HOWTO | Elastic</title>
+<meta class="elastic" name="content" content="Edit links | Docs HOWTO">
+
+<link rel="home" href="index.html" title="Docs HOWTO"/>
+<link rel="up" href="asciidoc-guide.html" title="Asciidoc Guide"/>
+<link rel="prev" href="tables.html" title="Tables"/>
+<link rel="next" href="chunking.html" title="Controlling chunking"/>
+<meta class="elastic" name="product_version" content=""/>
+<meta class="elastic" name="product_name" content=""/>
+<meta class="elastic" name="website_area" content="documentation"/>
+<meta name="DC.type" content="Learn/Docs/"/>
+<meta name="DC.subject" content=""/>
+<meta name="DC.identifier" content=""/>
+</head>
+<body>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="/guide/">Elastic Docs</a></span>
+<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="index.html">Docs HOWTO</a></span>
+<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="asciidoc-guide.html">Asciidoc Guide</a></span>
+</div>
+<div class="navheader">
+<span class="prev">
+<a href="tables.html">« Tables</a>
+</span>
+<span class="next">
+<a href="chunking.html">Controlling chunking »</a>
+</span>
+</div>
+<div class="chapter">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="edit_me"></a>Edit links<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>We automatically generate <code class="literal">edit</code> links for most sections to make it easier for
+folks to contribute simple fixes and to help folks find the asciidoc file that
+generated a particular section. It should appear next to every title-like thing.</p>
+<p>Books built with Asciidoctor will automatically pick the correct url for all
+files and by default doesn&#8217;t support overriding <code class="literal">edit_url</code>. This is mostly a
+good thing because the overridden `edit_url`s were out of date in many cases.</p>
+<p>Some books override <code class="literal">edit_url</code> because the asciidoc files in them are not
+authoritative. In that case they set <code class="literal">edit_url</code> to the "real" place to make the
+change. Sometimes this is another repository and sometimes it is some code that
+generates the asciidoc files. These books should add
+<code class="literal">respect_edit_url_overrides</code> to their config. While it isn&#8217;t required for
+AsciiDoc it is required for Asciidoctor.</p>
+</div>
+<div class="navfooter">
+<span class="prev">
+<a href="tables.html">« Tables</a>
+</span>
+<span class="next">
+<a href="chunking.html">Controlling chunking »</a>
+</span>
+</div>
+</div>
+</body>
+</html>

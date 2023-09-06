@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Controlling chunking | Docs HOWTO | Elastic</title>
+<meta class="elastic" name="content" content="Controlling chunking | Docs HOWTO">
+
+<link rel="home" href="index.html" title="Docs HOWTO"/>
+<link rel="up" href="asciidoc-guide.html" title="Asciidoc Guide"/>
+<link rel="prev" href="edit_me.html" title="Edit links"/>
+<link rel="next" href="tabbed-widgets.html" title="Tabbed widgets"/>
+<meta class="elastic" name="product_version" content=""/>
+<meta class="elastic" name="product_name" content=""/>
+<meta class="elastic" name="website_area" content="documentation"/>
+<meta name="DC.type" content="Learn/Docs/"/>
+<meta name="DC.subject" content=""/>
+<meta name="DC.identifier" content=""/>
+</head>
+<body>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="/guide/">Elastic Docs</a></span>
+<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="index.html">Docs HOWTO</a></span>
+<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="asciidoc-guide.html">Asciidoc Guide</a></span>
+</div>
+<div class="navheader">
+<span class="prev">
+<a href="edit_me.html">« Edit links</a>
+</span>
+<span class="next">
+<a href="tabbed-widgets.html">Tabbed widgets »</a>
+</span>
+</div>
+<div class="chapter">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="chunking"></a>Controlling chunking<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>In <a class="xref" href="structure.html" title="Basic book structure"><em>Basic book structure</em></a>, we said that each <code class="literal">part</code> or <code class="literal">chapter</code> generates
+a new <em>chunk</em> or HTML file.  For more complex documentation,
+you may want the first level of <code class="literal">section</code>s to also generate
+new chunks.</p>
+<p>For example:</p>
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">= 1st-level page                    // part
+
+== 2nd-level child page             // chapter
+
+=== 3rd-level child page            // section level 1
+
+=== Another 3rd-level child page    // section level 1
+
+... etc ...</pre>
+</div>
+<p>This renders in the TOC as follows:</p>
+<div class="imageblock">
+<div class="content">
+<img src="resources/readme/chunking-toc.png" alt="TOC screenshot">
+</div>
+</div>
+<div class="section">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="_enabling_section_chunking"></a>Enabling section chunking<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>To enable section chunking when building docs in a <a class="xref" href="local.html" title="For a local repo">local repository</a>,
+pass the <code class="literal">--chunk</code> parameter:</p>
+<div class="pre_wrapper lang-bash">
+<pre class="programlisting prettyprint lang-bash">build_docs --doc path/to/index.asciidoc --chunk 1</pre>
+</div>
+<p>To enable section chunking when building docs <a class="xref" href="website.html" title="Building all of the Elastic docs">for the website</a>,
+add <code class="literal">chunk: 1</code> to the
+<a href="https://github.com/elastic/docs/blob/master/conf.yaml" class="ulink" target="_top"><code class="literal">conf.yaml</code></a> file in the <code class="literal">docs</code> repo.</p>
+<div class="pre_wrapper lang-yaml">
+<pre class="programlisting prettyprint lang-yaml">contents:
+    -
+        title:      Elasticsearch Guide
+        prefix:     elasticsearch/reference
+        repo:       elasticsearch
+        index:      docs/reference/index.asciidoc
+        chunk:      1 <a id="CO6-1"></a><i class="conum" data-value="1"></i></pre>
+</div>
+<div class="calloutlist">
+<table border="0" summary="Callout list">
+<tr>
+<td align="left" valign="top" width="5%">
+<p><a href="#CO6-1"><i class="conum" data-value="1"></i></a></p>
+</td>
+<td align="left" valign="top">
+<p>Chunking is enabled for this book</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+<div class="section">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="_chunking_selected_sections"></a>Chunking selected sections<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>If you enable session chunking, you will probably find
+that you have a few short sections which you want to keep on
+the same page.</p>
+<p>To do this, you can use the <code class="literal">[discrete]</code> marker before a
+section header, to indicate that what follows isn&#8217;t
+a "real" header:</p>
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">[[chapter-one]]
+== chapter              // new chunk
+
+[[section-one]]
+=== Section one         // new chunk
+
+[discrete]
+[[section-two]]
+=== Section two         // same chunk
+
+[[section-three]]
+=== Section three       // new chunk</pre>
+</div>
+<p>The above would produce three HTML files,
+named for their IDs:</p>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+<code class="literal">chapter-one.html</code>
+</li>
+<li class="listitem">
+<code class="literal">section-one.html</code> which would also contain
+"Section two"
+</li>
+<li class="listitem">
+<code class="literal">section-three.html</code>
+</li>
+</ul>
+</div>
+<p>To link to "Section two" from an external
+document, you would use the URL: <code class="literal">section-one.html#section-two</code></p>
+</div>
+
+</div>
+<div class="navfooter">
+<span class="prev">
+<a href="edit_me.html">« Edit links</a>
+</span>
+<span class="next">
+<a href="tabbed-widgets.html">Tabbed widgets »</a>
+</span>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Images | Docs HOWTO | Elastic</title>
+<meta class="elastic" name="content" content="Images | Docs HOWTO">
+
+<link rel="home" href="index.html" title="Docs HOWTO"/>
+<link rel="up" href="asciidoc-guide.html" title="Asciidoc Guide"/>
+<link rel="prev" href="experimental.html" title="Beta, Dev, and Preview (experimental)"/>
+<link rel="next" href="videos.html" title="Videos"/>
+<meta class="elastic" name="product_version" content=""/>
+<meta class="elastic" name="product_name" content=""/>
+<meta class="elastic" name="website_area" content="documentation"/>
+<meta name="DC.type" content="Learn/Docs/"/>
+<meta name="DC.subject" content=""/>
+<meta name="DC.identifier" content=""/>
+</head>
+<body>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="/guide/">Elastic Docs</a></span>
+<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="index.html">Docs HOWTO</a></span>
+<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="asciidoc-guide.html">Asciidoc Guide</a></span>
+</div>
+<div class="navheader">
+<span class="prev">
+<a href="experimental.html">« Beta, Dev, and Preview (experimental)</a>
+</span>
+<span class="next">
+<a href="videos.html">Videos »</a>
+</span>
+</div>
+<div class="chapter">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="images"></a>Images<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>Any images you want to include should be saved in a folder
+in your repo, and included using a path relative
+to the document where the <code class="literal">image::</code> statement appears.</p>
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">[[cat]]
+.A scaredy cat
+image::resources/readme/cat.jpg[Alt text]
+
+A link to &lt;&lt;cat&gt;&gt;</pre>
+</div>
+<div id="cat" class="imageblock">
+<div class="content">
+<img src="resources/readme/cat.jpg" alt="Alt text">
+</div>
+<div class="title">Figure 1. A scaredy cat</div>
+</div>
+<p>A link to <a class="xref" href="images.html#cat" title="A scaredy cat">Figure 1, &#8220;A scaredy cat&#8221;</a>.</p>
+<div class="section">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="_width_and_height"></a>Width and height<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>The <code class="literal">width</code> and/or <code class="literal">height</code> of the image can be
+specified in pixels or as a percentage:</p>
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">image::resources/readme/cat.jpg["Alt text",width=50]
+image::resources/readme/cat.jpg["Alt text",width="20%"]</pre>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="resources/readme/cat.jpg" alt="Alt text" width="50">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="resources/readme/cat.jpg" alt="Alt text" width="20%">
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="_alignment"></a>Alignment<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>Images are left-aligned by default, but they can
+be centred or right-aligned:</p>
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">image::resources/readme/cat.jpg["Alt text",width=100,align="left"]
+image::resources/readme/cat.jpg["Alt text",width=100,align="right"]
+image::resources/readme/cat.jpg["Alt text",width=100,align="center"]</pre>
+</div>
+<div class="imageblock text-left">
+<div class="content">
+<img src="resources/readme/cat.jpg" alt="Alt text" width="100">
+</div>
+</div>
+<div class="imageblock text-right">
+<div class="content">
+<img src="resources/readme/cat.jpg" alt="Alt text" width="100">
+</div>
+</div>
+<div class="imageblock text-center">
+<div class="content">
+<img src="resources/readme/cat.jpg" alt="Alt text" width="100">
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="_screenshots"></a>Screenshots<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>Screenshots get extra margins and a box-shadow:</p>
+<div class="imageblock screenshot">
+<div class="content">
+<img src="resources/readme/screenshot.png" alt="A screenshot example">
+</div>
+</div>
+<p>You can activate it with:</p>
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">[role="screenshot"]
+image::resources/readme/screenshot.png[A screenshot example]</pre>
+</div>
+</div>
+
+<div class="section">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="svgs"></a>SVGs<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>SVGs are also supported. Just use them like you would any other image:</p>
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">image::resources/readme/example.svg[An example svg]</pre>
+</div>
+<p>Which looks like:</p>
+<div class="imageblock">
+<div class="content">
+<img src="resources/readme/example.svg" alt="An example svg">
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="image-links"></a>Image links<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>You can add relative or absoloute links to your images with the following syntax:</p>
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">image:./images/dynamic-config.svg[link=configuration.html#configuration-dynamic]</pre>
+</div>
+<p>Using internal link attributes is also supported, but the image must be inside the internal link syntax.
+It&#8217;s important to add a space on each side of the image tag. Without spaces, the image will not render.</p>
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">&lt;&lt;configuration-dynamic, image:./images/dynamic-config.svg[] &gt;&gt;</pre>
+</div>
+</div>
+
+</div>
+<div class="navfooter">
+<span class="prev">
+<a href="experimental.html">« Beta, Dev, and Preview (experimental)</a>
+</span>
+<span class="next">
+<a href="videos.html">Videos »</a>
+</span>
+</div>
+</div>
+</body>
+</html>

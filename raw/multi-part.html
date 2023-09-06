@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Multi-part books | Docs HOWTO | Elastic</title>
+<meta class="elastic" name="content" content="Multi-part books | Docs HOWTO">
+
+<link rel="home" href="index.html" title="Docs HOWTO"/>
+<link rel="up" href="asciidoc-guide.html" title="Asciidoc Guide"/>
+<link rel="prev" href="structure.html" title="Basic book structure"/>
+<link rel="next" href="optional-sections.html" title="Optional sections"/>
+<meta class="elastic" name="product_version" content=""/>
+<meta class="elastic" name="product_name" content=""/>
+<meta class="elastic" name="website_area" content="documentation"/>
+<meta name="DC.type" content="Learn/Docs/"/>
+<meta name="DC.subject" content=""/>
+<meta name="DC.identifier" content=""/>
+</head>
+<body>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="/guide/">Elastic Docs</a></span>
+<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="index.html">Docs HOWTO</a></span>
+<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="asciidoc-guide.html">Asciidoc Guide</a></span>
+</div>
+<div class="navheader">
+<span class="prev">
+<a href="structure.html">« Basic book structure</a>
+</span>
+<span class="next">
+<a href="optional-sections.html">Optional sections »</a>
+</span>
+</div>
+<div class="chapter">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="multi-part"></a>Multi-part books<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>Books may also be divided into multiple parts, which are indicated
+with <code class="literal">level 0</code> headers:</p>
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">= Book title                // level 0
+
+= Part title                // level 0
+
+== Chapter title            // level 1
+
+=== Section title           // level 2
+
+... etc ...</pre>
+</div>
+<p>Each <code class="literal">part</code> also creates a new <em>chunk</em> or HTML file.</p>
+<div class="section">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="_part_intro"></a>Part intro<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>A <code class="literal">part</code> may include text before the first <code class="literal">chapter</code>, but
+it must be marked with <code class="literal">[partintro]</code> in order to be valid:</p>
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">= Book title                // level 0
+
+= Part one                  // level 0
+
+[partintro]
+A paragraph introducing this Part
+
+== Chapter title            // level 1
+
+... etc ...</pre>
+</div>
+<p>Longer <code class="literal">partintro</code> blocks should be wrapped in an
+<a href="https://asciidoctor.org/docs/user-manual/#open-blocks" class="ulink" target="_top"><em>open block</em></a>
+which starts and ends with two dashes: <code class="literal">--</code>:</p>
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">= Part two                  // level 0
+
+[partintro]
+.A partintro title
+-- <a id="CO1-1"></a><i class="conum" data-value="1"></i>
+This section may contain multiple paragraphs.
+
+[discrete]
+== A header should use [discrete]
+
+Everything up to the closing -- marker
+will be considered part of the partintro.
+-- <a id="CO1-2"></a><i class="conum" data-value="1"></i>
+
+== Chapter title           // level 2
+
+... etc ...</pre>
+</div>
+<div class="calloutlist">
+<table border="0" summary="Callout list">
+<tr>
+<td align="left" valign="top" width="5%">
+<p><a href="#CO1-1"><i class="conum" data-value="1"></i></a><a href="#CO1-2"></a></p>
+</td>
+<td align="left" valign="top">
+<p>The <em>open block</em> delimiters</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+</div>
+<div class="navfooter">
+<span class="prev">
+<a href="structure.html">« Basic book structure</a>
+</span>
+<span class="next">
+<a href="optional-sections.html">Optional sections »</a>
+</span>
+</div>
+</div>
+</body>
+</html>

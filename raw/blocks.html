@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Blocks | Docs HOWTO | Elastic</title>
+<meta class="elastic" name="content" content="Blocks | Docs HOWTO">
+
+<link rel="home" href="index.html" title="Docs HOWTO"/>
+<link rel="up" href="asciidoc-guide.html" title="Asciidoc Guide"/>
+<link rel="prev" href="lists.html" title="Lists"/>
+<link rel="next" href="includes.html" title="Including files"/>
+<meta class="elastic" name="product_version" content=""/>
+<meta class="elastic" name="product_name" content=""/>
+<meta class="elastic" name="website_area" content="documentation"/>
+<meta name="DC.type" content="Learn/Docs/"/>
+<meta name="DC.subject" content=""/>
+<meta name="DC.identifier" content=""/>
+</head>
+<body>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="/guide/">Elastic Docs</a></span>
+<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="index.html">Docs HOWTO</a></span>
+<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="asciidoc-guide.html">Asciidoc Guide</a></span>
+</div>
+<div class="navheader">
+<span class="prev">
+<a href="lists.html">« Lists</a>
+</span>
+<span class="next">
+<a href="includes.html">Including files »</a>
+</span>
+</div>
+<div class="chapter">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="blocks"></a>Blocks<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>Blocks are used for special blocks of content, such as
+<a class="xref" href="blocks.html#code-blocks" title="Code blocks">Code blocks</a>, <a class="xref" href="blocks.html#examples" title="Example blocks">Example blocks</a>, <a class="xref" href="blocks.html#sidebars" title="Sidebars">Sidebars</a> and
+<a class="xref" href="blocks.html#admon-blocks" title="Admonition blocks">Admonition blocks</a>.</p>
+<p>Blocks are delimited with a start and end line which uses
+the same characters, like <code class="literal">=====</code>.</p>
+<div class="section">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="code-blocks"></a>Code blocks<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>Code blocks are rendered as <code class="literal">&lt;pre&gt;</code> blocks, and use
+syntax highlighting, eg:</p>
+<div class="example">
+<p class="title"><strong>Example 14. A code block</strong></p>
+<div class="example-contents">
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">.Optional title
+[source,js]
+----------------------------------
+{
+    "query": "foo bar"
+}
+----------------------------------</pre>
+</div>
+<p><strong>Optional title.</strong></p>
+<div class="pre_wrapper lang-js">
+<pre class="programlisting prettyprint lang-js">{
+    "query": "foo bar"
+}</pre>
+</div>
+</div>
+</div>
+<div class="important admon">
+<div class="icon"></div>
+<div class="admon_content">
+<p>If you don&#8217;t specify the source language then the generated
+HTML is <span class="strong strong"><strong>quite</strong></span> different so, in general, you should specify a language.
+We use the language as a hint for the syntax highlighter. See files in
+this repository names <code class="literal">lang-*.js</code> for information.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="_callouts"></a>Callouts<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>Code blocks can use <em>callouts</em> to add an explanatory
+footnote to a particular line of code:</p>
+<div class="example">
+<p class="title"><strong>Example 15. Code block with callouts</strong></p>
+<div class="example-contents">
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">[source,js]
+----------------------------------
+{
+    "query": "foo bar" &lt;1&gt;
+}
+----------------------------------
+&lt;1&gt; Here's the explanation</pre>
+</div>
+<div class="pre_wrapper lang-js">
+<pre class="programlisting prettyprint lang-js">{
+    "query": "foo bar" <a id="CO4-1"></a><i class="conum" data-value="1"></i>
+}</pre>
+</div>
+<div class="calloutlist">
+<table border="0" summary="Callout list">
+<tr>
+<td align="left" valign="top" width="5%">
+<p><a href="#CO4-1"><i class="conum" data-value="1"></i></a></p>
+</td>
+<td align="left" valign="top">
+<p>Here&#8217;s the explanation</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="copy-as-curl"></a>Copy as curl/View in Console<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>Code blocks can be followed by a "Copy as curl" link which will convert the
+snippet into a sequence of calls to the ubiquitous
+<a href="https://curl.se/" class="ulink" target="_top">curl</a> tool that work in the bash shell and copy it to
+the clipboard. Similarly, if the target of the snippet is Elasticsearch we also
+add a "View in Console" link will open the code snippet in Console.</p>
+<p>You enable it by setting the "language" of the snippet to a supported
+language. The options are "console" for Elasticsearch, "kibana" for Kibana,
+"ess" for Elasticsearch Service (Elastic&#8217;s official SaaS offering), and "ece"
+for Elastic Cloud Enterprise.</p>
+<p>For Elasticsearch do this:</p>
+<div class="example">
+<p class="title"><strong>Example 16. Code block with "Copy as curl" and "View in Console" link for Elasticsearch</strong></p>
+<div class="example-contents">
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">[source,console]
+----------------------------------
+GET /_search
+{
+    "query": "foo bar" &lt;1&gt;
+}
+----------------------------------
+&lt;1&gt; Here's the explanation</pre>
+</div>
+</div>
+</div>
+<p>Which renders as:</p>
+<div class="pre_wrapper lang-console">
+<pre class="programlisting prettyprint lang-console">GET /_search
+{
+    "query": "foo bar" <a id="CO5-1"></a><i class="conum" data-value="1"></i>
+}</pre>
+</div>
+<div class="console_widget" data-snippet="snippets/1.console"></div>
+<div class="calloutlist">
+<table border="0" summary="Callout list">
+<tr>
+<td align="left" valign="top" width="5%">
+<p><a href="#CO5-1"><i class="conum" data-value="1"></i></a></p>
+</td>
+<td align="left" valign="top">
+<p>Here&#8217;s the explanation</p>
+</td>
+</tr>
+</table>
+</div>
+<div class="note admon">
+<div class="icon"></div>
+<div class="admon_content">
+<p>In older branches you&#8217;ll see <code class="literal">// CONSOLE</code> after the snippet to trigger
+      this behavior. That is deprecated.</p>
+</div>
+</div>
+<p>For Kibana do this:</p>
+<div class="example">
+<p class="title"><strong>Example 17. Code block with "Copy as curl" link for Kibana</strong></p>
+<div class="example-contents">
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">[source,kibana]
+----------------------------------
+GET /
+----------------------------------</pre>
+</div>
+</div>
+</div>
+<p>Which renders as:</p>
+<div class="pre_wrapper lang-kibana">
+<pre class="programlisting prettyprint lang-kibana">GET /</pre>
+</div>
+<div class="kibana_widget" data-snippet="snippets/2.kibana"></div>
+<p>For Elasticsearch Service do this:</p>
+<div class="example">
+<p class="title"><strong>Example 18. Code block with "Copy as curl" link for Elasticsearch Service</strong></p>
+<div class="example-contents">
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">[source,ess]
+----------------------------------
+GET /
+----------------------------------</pre>
+</div>
+</div>
+</div>
+<p>Which renders as:</p>
+<div class="pre_wrapper lang-ess">
+<pre class="programlisting prettyprint lang-ess">GET /</pre>
+</div>
+<div class="ess_widget" data-snippet="snippets/3.ess"></div>
+<p>For Elastic Cloud Enterprise do this:</p>
+<div class="example">
+<p class="title"><strong>Example 19. Code block with "Copy as curl" link for Elastic Cloud Enterprise</strong></p>
+<div class="example-contents">
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">[source,ece]
+----------------------------------
+GET /
+----------------------------------</pre>
+</div>
+</div>
+</div>
+<p>Which renders as:</p>
+<div class="pre_wrapper lang-ece">
+<pre class="programlisting prettyprint lang-ece">GET /</pre>
+</div>
+<div class="ece_widget" data-snippet="snippets/4.ece"></div>
+<div class="section">
+<div class="titlepage"><div><div>
+<h3 class="title"><a id="_responses"></a>Responses<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h3>
+</div></div></div>
+<p>If <code class="literal">Console</code> requests are followed by a "response" then it should be written
+with the language set to <code class="literal">console-response</code>. That will allow
+<a class="xref" href="local.html#alternative_languages" title="Alternative languages for examples">alternative examples</a> to find the responses.
+Like this:</p>
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">[source,console-result]
+----------------------------------
+{
+    "hits": {
+        "total": { "value": 0, "relation": "eq" },
+        "hits": []
+    }
+}
+----------------------------------</pre>
+</div>
+<p>Which should render as:</p>
+<div class="pre_wrapper lang-console-result">
+<pre class="programlisting prettyprint lang-console-result">{
+    "hits": {
+        "total": { "value": 0, "relation": "eq" },
+        "hits": []
+    }
+}</pre>
+</div>
+</div>
+
+</div>
+
+<div class="section">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="admon-blocks"></a>Admonition blocks<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>Admonition blocks are much the same as <a class="xref" href="paragraphs.html#admon-paras" title="Admonition paragraphs">Admonition paragraphs</a>, except that
+they can be longer and contain more than just a paragraph.
+For instance:</p>
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">[NOTE]
+=========================
+This note contains a list:
+
+* foo
+* bar
+* baz
+
+and some code
+
+[source,js]
+----------------------------------
+{ "query": "foo bar"}
+----------------------------------
+=========================</pre>
+</div>
+<p>This renders as:</p>
+<div class="note admon">
+<div class="icon"></div>
+<div class="admon_content">
+<p>This note contains a list:</p>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+foo
+</li>
+<li class="listitem">
+bar
+</li>
+<li class="listitem">
+baz
+</li>
+</ul>
+</div>
+<p>and some code</p>
+<div class="pre_wrapper lang-js">
+<pre class="programlisting prettyprint lang-js">{ "query": "foo bar"}</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="sidebars"></a>Sidebars<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>Sidebars are used to highlight a block of
+content that is outside the usual flow of text:</p>
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">.Optional title
+**********************************
+So why does the `bulk` API have such a
+funny format?  Sit down and I'll tell you
+all about it!
+**********************************</pre>
+</div>
+<div class="sidebar">
+<div class="titlepage"><div><div>
+<p class="title"><strong>Optional title</strong></p>
+</div></div></div>
+<p>So why does the <code class="literal">bulk</code> API have such a
+funny format?  Sit down and I&#8217;ll tell you
+all about it!</p>
+</div>
+</div>
+
+<div class="section">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="examples"></a>Example blocks<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>Example blocks contain normal text which is used as an
+example.  The title, if any, is labelled as an example
+and numbered:</p>
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">.My first example
+========================================
+Text explaining the first example.
+========================================
+
+.My second example
+========================================
+Text explaining the second example.
+========================================</pre>
+</div>
+<p>This renders as:</p>
+<div class="example">
+<p class="title"><strong>Example 20. My first example</strong></p>
+<div class="example-contents">
+<p>Text explaining the first example.</p>
+</div>
+</div>
+<div class="example">
+<p class="title"><strong>Example 21. My second example</strong></p>
+<div class="example-contents">
+<p>Text explaining the second example.</p>
+</div>
+</div>
+<div class="caution admon">
+<div class="icon"></div>
+<div class="admon_content">
+<p>The <code class="literal">===</code> and <code class="literal">---</code> delimiters can
+sometimes be confused with a header, resulting
+in an error.  To resolve this, add newlines
+between the delimiter and the content
+before and after it.</p>
+</div>
+</div>
+<p>Examples can be made collapsible:</p>
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">[%collapsible]
+.An example
+====
+Lots of text can go in here.
+====</pre>
+</div>
+<p>Which renders as:</p>
+<details>
+<summary class="title">An example</summary>
+<div class="content">
+<p>Lots of text can go in here.</p>
+</div>
+</details>
+</div>
+
+</div>
+<div class="navfooter">
+<span class="prev">
+<a href="lists.html">« Lists</a>
+</span>
+<span class="next">
+<a href="includes.html">Including files »</a>
+</span>
+</div>
+</div>
+</body>
+</html>

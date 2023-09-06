@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Paragraphs | Docs HOWTO | Elastic</title>
+<meta class="elastic" name="content" content="Paragraphs | Docs HOWTO">
+
+<link rel="home" href="index.html" title="Docs HOWTO"/>
+<link rel="up" href="asciidoc-guide.html" title="Asciidoc Guide"/>
+<link rel="prev" href="optional-sections.html" title="Optional sections"/>
+<link rel="next" href="text.html" title="Inline text"/>
+<meta class="elastic" name="product_version" content=""/>
+<meta class="elastic" name="product_name" content=""/>
+<meta class="elastic" name="website_area" content="documentation"/>
+<meta name="DC.type" content="Learn/Docs/"/>
+<meta name="DC.subject" content=""/>
+<meta name="DC.identifier" content=""/>
+</head>
+<body>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="/guide/">Elastic Docs</a></span>
+<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="index.html">Docs HOWTO</a></span>
+<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="asciidoc-guide.html">Asciidoc Guide</a></span>
+</div>
+<div class="navheader">
+<span class="prev">
+<a href="optional-sections.html">« Optional sections</a>
+</span>
+<span class="next">
+<a href="text.html">Inline text »</a>
+</span>
+</div>
+<div class="chapter">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="paragraphs"></a>Paragraphs<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>A paragraph consists of multiple lines of text which start
+in the left hand column:</p>
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">This is a paragraph
+even though it contains
+line breaks.
+
+This is a second paragraph.</pre>
+</div>
+<div class="section">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="_paragraph_titles"></a>Paragraph titles<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>Like most elements, a paragraph can have a title:</p>
+<div class="example">
+<p class="title"><strong>Example 1. Paragraph with a title</strong></p>
+<div class="example-contents">
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">.Paragraph title
+Text of my paragraph</pre>
+</div>
+<p><strong>Paragraph title</strong>Text of my paragraph</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="admon-paras"></a>Admonition paragraphs<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>A paragraph which starts with <code class="literal">TIP:</code>, <code class="literal">NOTE:</code>, <code class="literal">IMPORTANT:</code>,
+<code class="literal">WARNING:</code> or <code class="literal">CAUTION:</code> is rendered as an <em>admonition</em> paragraph,
+eg:</p>
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">NOTE: Compare admonition paragraphs with &lt;&lt;admon-blocks&gt;&gt;.</pre>
+</div>
+<p>This renders as:</p>
+<div class="note admon">
+<div class="icon"></div>
+<div class="admon_content">
+<p>Compare admonition paragraphs
+with <a class="xref" href="blocks.html#admon-blocks" title="Admonition blocks">Admonition blocks</a>.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="_literal_paragraphs"></a>Literal paragraphs<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>Literal paragraphs, which are rendered as <code class="literal">&lt;pre&gt;</code>
+blocks without any source highlighting, must be
+indented:</p>
+<div class="example">
+<p class="title"><strong>Example 2. A literal paragraph</strong></p>
+<div class="example-contents">
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">.Optional title
+
+    This para must
+    be indented</pre>
+</div>
+<pre class="literallayout">This para must
+be indented</pre>
+
+</div>
+</div>
+<p>See also <a class="xref" href="blocks.html#code-blocks" title="Code blocks">Code blocks</a> for blocks with
+syntax highlighting.</p>
+</div>
+
+</div>
+<div class="navfooter">
+<span class="prev">
+<a href="optional-sections.html">« Optional sections</a>
+</span>
+<span class="next">
+<a href="text.html">Inline text »</a>
+</span>
+</div>
+</div>
+</body>
+</html>

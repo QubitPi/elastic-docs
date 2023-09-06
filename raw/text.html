@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Inline text | Docs HOWTO | Elastic</title>
+<meta class="elastic" name="content" content="Inline text | Docs HOWTO">
+
+<link rel="home" href="index.html" title="Docs HOWTO"/>
+<link rel="up" href="asciidoc-guide.html" title="Asciidoc Guide"/>
+<link rel="prev" href="paragraphs.html" title="Paragraphs"/>
+<link rel="next" href="shared-attributes.html" title="Shared attributes"/>
+<meta class="elastic" name="product_version" content=""/>
+<meta class="elastic" name="product_name" content=""/>
+<meta class="elastic" name="website_area" content="documentation"/>
+<meta name="DC.type" content="Learn/Docs/"/>
+<meta name="DC.subject" content=""/>
+<meta name="DC.identifier" content=""/>
+</head>
+<body>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="/guide/">Elastic Docs</a></span>
+<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="index.html">Docs HOWTO</a></span>
+<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="asciidoc-guide.html">Asciidoc Guide</a></span>
+</div>
+<div class="navheader">
+<span class="prev">
+<a href="paragraphs.html">« Paragraphs</a>
+</span>
+<span class="next">
+<a href="shared-attributes.html">Shared attributes »</a>
+</span>
+</div>
+<div class="chapter">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="text"></a>Inline text<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>Inline text can be formatted as follows:</p>
+<div class="informaltable">
+<table border="0" cellpadding="4px">
+<colgroup>
+<col/>
+<col/>
+</colgroup>
+<tbody valign="top">
+<tr>
+<td valign="top">
+<p>
+<code class="literal">&#x5f;emphasis_</code>
+</p>
+</td>
+<td valign="top">
+<p>
+<em>emphasis</em>
+</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>
+<code class="literal">&#x2a;bold*</code>
+</p>
+</td>
+<td valign="top">
+<p>
+<span class="strong strong"><strong>bold</strong></span>
+</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>
+<code class="literal">&#x60;mono'</code>
+</p>
+</td>
+<td valign="top">
+<p>
+<code class="literal">mono</code>
+</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>
+<code class="literal">&#x5e;superscript^</code>
+</p>
+</td>
+<td valign="top">
+<p>
+<sup>superscript</sup>
+</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>
+<code class="literal">&#x7e;subscript~</code>
+</p>
+</td>
+<td valign="top">
+<p>
+<sub>subscript</sub>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>These formatting characters expect to adjoin whitespace or
+common punctuation characters.  To combine <span class="strong strong"><strong>bold</strong></span> with emphasis,
+double up the quotes (ie use <code class="literal">__</code> and <code class="literal">**</code>):</p>
+<div class="example">
+<p class="title"><strong>Example 3. Combining bold and emphasis</strong></p>
+<div class="example-contents">
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">This example co__mb**in**es__ bold and emphasis</pre>
+</div>
+<p>This example co<em>mb<span class="strong strong"><strong>in</strong></span>es</em> bold and emphasis.</p>
+</div>
+</div>
+<p>Unwanted quotes can be escaped with a <code class="literal">\</code> character.</p>
+<div class="section">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="_replacement_characters"></a>Replacement characters<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>Certain runs of ASCII characters are replaced as follows:</p>
+<div class="informaltable">
+<table border="0" cellpadding="4px">
+<colgroup>
+<col/>
+<col/>
+</colgroup>
+<tbody valign="top">
+<tr>
+<td valign="top">
+<p>
+<code class="literal">--</code>
+</p>
+</td>
+<td valign="top">
+<p>
+&#8201;&#8212;&#8201;(em dash)
+</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>
+<code class="literal">&#x2e;..</code>
+</p>
+</td>
+<td valign="top">
+<p>
+&#8230;&#8203;
+</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>
+<code class="literal">&#x2d;&gt;</code>
+</p>
+</td>
+<td valign="top">
+<p>
+&#8594;
+</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>
+<code class="literal">&lt;&#x2d;</code>
+</p>
+</td>
+<td valign="top">
+<p>
+&#8592;
+</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>
+<code class="literal">&#x3d;&gt;</code>
+</p>
+</td>
+<td valign="top">
+<p>
+&#8658;
+</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>
+<code class="literal">&lt;&#x3d;</code>
+</p>
+</td>
+<td valign="top">
+<p>
+&#8656;
+</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>
+<code class="literal">&#x28;C)</code>
+</p>
+</td>
+<td valign="top">
+<p>
+&#169;
+</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>
+<code class="literal">&#x28;TM)</code>
+</p>
+</td>
+<td valign="top">
+<p>
+&#8482;
+</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>
+<code class="literal">&#x28;R)</code>
+</p>
+</td>
+<td valign="top">
+<p>
+&#174;
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+<div class="navfooter">
+<span class="prev">
+<a href="paragraphs.html">« Paragraphs</a>
+</span>
+<span class="next">
+<a href="shared-attributes.html">Shared attributes »</a>
+</span>
+</div>
+</div>
+</body>
+</html>

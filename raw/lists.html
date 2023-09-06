@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lists | Docs HOWTO | Elastic</title>
+<meta class="elastic" name="content" content="Lists | Docs HOWTO">
+
+<link rel="home" href="index.html" title="Docs HOWTO"/>
+<link rel="up" href="asciidoc-guide.html" title="Asciidoc Guide"/>
+<link rel="prev" href="linking.html" title="Linking"/>
+<link rel="next" href="blocks.html" title="Blocks"/>
+<meta class="elastic" name="product_version" content=""/>
+<meta class="elastic" name="product_name" content=""/>
+<meta class="elastic" name="website_area" content="documentation"/>
+<meta name="DC.type" content="Learn/Docs/"/>
+<meta name="DC.subject" content=""/>
+<meta name="DC.identifier" content=""/>
+</head>
+<body>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="/guide/">Elastic Docs</a></span>
+<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="index.html">Docs HOWTO</a></span>
+<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="asciidoc-guide.html">Asciidoc Guide</a></span>
+</div>
+<div class="navheader">
+<span class="prev">
+<a href="linking.html">« Linking</a>
+</span>
+<span class="next">
+<a href="blocks.html">Blocks »</a>
+</span>
+</div>
+<div class="chapter">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="lists"></a>Lists<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<div class="section">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="_bullet_points"></a>Bullet points<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>Bullet point lists are written using asterisks:</p>
+<div class="example">
+<p class="title"><strong>Example 10. Bullet points</strong></p>
+<div class="example-contents">
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">.Optional title
+* Point
+* Point
+** Sub-point
+*** Sub-sub-point
+* [ ] TODO
+* [x] Done
+* A point can have multiple paragraphs
++
+But use a `+` instead of an empty line between paras.
+
+An empty line signifies the end of the list.</pre>
+</div>
+<div class="ulist checklist itemizedlist">
+<p class="title"><strong>Optional title</strong></p>
+<ul class="checklist">
+<li class="listitem">
+Point
+</li>
+<li class="listitem">
+<p>Point</p>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+<p>Sub-point</p>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+Sub-sub-point
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+<li class="listitem">
+&#10063; TODO
+</li>
+<li class="listitem">
+&#10003; Done
+</li>
+<li class="listitem">
+<p>A point can have multiple paragraphs</p>
+<p>But use a <code class="literal">+</code> instead of an empty line between paras</p>
+</li>
+</ul>
+</div>
+<p>An empty line signifies the end of the list.</p>
+</div>
+</div>
+<p>For more information, see <a href="https://asciidoctor.org/docs/user-manual/#unordered-lists" class="ulink" target="_top">https://asciidoctor.org/docs/user-manual/#unordered-lists</a></p>
+</div>
+
+<div class="section">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="_ordered_lists"></a>Ordered lists<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>Ordered lists use <code class="literal">.</code> instead of <code class="literal">*</code>, and will alternate
+between numbers and letters automatically:</p>
+<div class="example">
+<p class="title"><strong>Example 11. An ordered list</strong></p>
+<div class="example-contents">
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">.Optional title
+. foo
+.. bar
+... baz
+.... balloo</pre>
+</div>
+<div class="olist orderedlist">
+<p class="title"><strong>Optional title</strong></p>
+<ol class="orderedlist">
+<li class="listitem">
+<p>foo</p>
+<div class="olist orderedlist">
+<ol class="orderedlist">
+<li class="listitem">
+<p>bar</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li class="listitem">
+<p>baz</p>
+<div class="olist upperalpha">
+<ol class="upperalpha" type="A">
+<li class="listitem">
+balloo
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<p>For more information, see <a href="https://asciidoctor.org/docs/user-manual/#ordered-lists" class="ulink" target="_top">https://asciidoctor.org/docs/user-manual/#ordered-lists</a></p>
+</div>
+
+<div class="section">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="_definition_lists"></a>Definition lists<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>Definition lists are used to define terms. The term must be
+followed by a double colon <code class="literal">::</code> eg:</p>
+<div class="example">
+<p class="title"><strong>Example 12. A vertical definition list</strong></p>
+<div class="example-contents">
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">term one::      Definition for term one
+term two::
+                Can start on the next line
+term three::    A definition can have multiple
++
+paragraphs, but use `+` to separate them
+
+term four:::    Definitions can be nested
+                by adding more colons
+term five::     A definition can even include
+                lists:
+                * point one
+                * point two</pre>
+</div>
+<div class="variablelist">
+<dl class="variablelist">
+<dt>
+<span class="term">
+term one
+</span>
+</dt>
+<dd>
+Definition for term one
+</dd>
+<dt>
+<span class="term">
+term two
+</span>
+</dt>
+<dd>
+Can start on the next line
+</dd>
+<dt>
+<span class="term">
+term three
+</span>
+</dt>
+<dd>
+<p>
+A definition can have multiple
+</p>
+<p>paragraphs, but use <code class="literal">+</code> to separate them</p>
+<div class="variablelist">
+<dl class="variablelist">
+<dt>
+<span class="term">
+term four
+</span>
+</dt>
+<dd>
+Definitions can be nested
+by adding more colons
+</dd>
+</dl>
+</div>
+</dd>
+<dt>
+<span class="term">
+term five
+</span>
+</dt>
+<dd>
+<p>
+A definition can even include
+lists:
+</p>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+point one
+</li>
+<li class="listitem">
+point two
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="horizonta-defn-list"></a>Horizontal definition lists<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>Often definition lists are better rendered
+horizontally, eg:</p>
+<div class="example">
+<p class="title"><strong>Example 13. A horizontal definition list</strong></p>
+<div class="example-contents">
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">[horizontal]
+term one::      Definition for term one
+term two::
+                Can start on the next line
+term three::    A definition can have multiple
++
+paragraphs, but use `+` to separate them
+
+term four:::    Definitions can be nested
+                by adding more colons
+term five::     A definition can even include
+                lists:
+                * point one
+                * point two</pre>
+</div>
+<div class="informaltable">
+<table border="0" cellpadding="4px">
+<colgroup>
+<col/>
+<col/>
+</colgroup>
+<tbody valign="top">
+<tr>
+<td valign="top">
+<p>
+term one
+</p>
+</td>
+<td valign="top">
+<p>
+Definition for term one
+</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>
+term two
+</p>
+</td>
+<td valign="top">
+<p>
+Can start on the next line
+</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>
+term three
+</p>
+</td>
+<td valign="top">
+<p>
+<p>
+A definition can have multiple
+</p>
+<p>paragraphs, but use <code class="literal">+</code> to separate them</p>
+<div class="variablelist">
+<dl class="variablelist">
+<dt>
+<span class="term">
+term four
+</span>
+</dt>
+<dd>
+Definitions can be nested
+by adding more colons
+</dd>
+</dl>
+</div>
+</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<p>
+term five
+</p>
+</td>
+<td valign="top">
+<p>
+<p>
+A definition can even include
+lists:
+</p>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+point one
+</li>
+<li class="listitem">
+point two
+</li>
+</ul>
+</div>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="navfooter">
+<span class="prev">
+<a href="linking.html">« Linking</a>
+</span>
+<span class="next">
+<a href="blocks.html">Blocks »</a>
+</span>
+</div>
+</div>
+</body>
+</html>

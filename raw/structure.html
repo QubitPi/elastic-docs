@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Basic book structure | Docs HOWTO | Elastic</title>
+<meta class="elastic" name="content" content="Basic book structure | Docs HOWTO">
+
+<link rel="home" href="index.html" title="Docs HOWTO"/>
+<link rel="up" href="asciidoc-guide.html" title="Asciidoc Guide"/>
+<link rel="prev" href="asciidoc-guide.html" title="Asciidoc Guide"/>
+<link rel="next" href="multi-part.html" title="Multi-part books"/>
+<meta class="elastic" name="product_version" content=""/>
+<meta class="elastic" name="product_name" content=""/>
+<meta class="elastic" name="website_area" content="documentation"/>
+<meta name="DC.type" content="Learn/Docs/"/>
+<meta name="DC.subject" content=""/>
+<meta name="DC.identifier" content=""/>
+</head>
+<body>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="/guide/">Elastic Docs</a></span>
+<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="index.html">Docs HOWTO</a></span>
+<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="asciidoc-guide.html">Asciidoc Guide</a></span>
+</div>
+<div class="navheader">
+<span class="prev">
+<a href="asciidoc-guide.html">« Asciidoc Guide</a>
+</span>
+<span class="next">
+<a href="multi-part.html">Multi-part books »</a>
+</span>
+</div>
+<div class="chapter">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="structure"></a>Basic book structure<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>Asciidocs can be built as a <code class="literal">book</code>, <code class="literal">article</code>, <code class="literal">manpage</code> etc.
+All our docs are built as a <code class="literal">book</code>, and thus follow the
+layout for books.  The most basic structure is as follows:</p>
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">= Book title                // level 0
+
+== Chapter title            // level 1
+
+=== Section title           // level 2
+
+==== Section title          // level 3
+
+===== Section title         // level 4</pre>
+</div>
+<p>Usually this structure will be sufficient for most of your
+documentation needs. More complicated "books", such
+as the <a href="https://www.elastic.co/guide/en/elasticsearch/reference/8.9" class="ulink" target="_top">Elasticsearch Guide</a>,
+require a few additional elements, described on the
+following pages.</p>
+<div class="section">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="_filenames"></a>Filenames<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>By default, each chapter will generate a new <em>chunk</em>
+or HTML file.  You can control the name of the file
+by giving the header an ID, as follows:</p>
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">[[intro-to-xyz]]
+== Intro to XYZ</pre>
+</div>
+<p>This chapter would then be written to a file called
+<code class="literal">intro-to-xyz.html</code>.  If no ID is provided, then a
+filename will be auto-generated.  See <a class="xref" href="chunking.html" title="Controlling chunking"><em>Controlling chunking</em></a>
+for more.</p>
+<p>These IDs are also used to link to sections within each
+book.  See <a class="xref" href="linking.html" title="Linking"><em>Linking</em></a>.</p>
+<div class="tip admon">
+<div class="icon"></div>
+<div class="admon_content">
+<p>For search engine optimization (SEO), make sure the keywords you use in the
+ID match keywords used in the topic title. For example, if the topic is called
+"Install XYZ", use <code class="literal">+[[install-xyz]]+</code> for the topic ID.</p>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="_toc_titles"></a>TOC titles<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>By default, the link text used in the generated TOC is
+based on the title of each file. You can provide an
+abbreviated title using a <code class="literal">titleabbrev</code> in
+one of two ways:</p>
+<div class="olist orderedlist">
+<ol class="orderedlist">
+<li class="listitem">
+<p>You <span class="strong strong"><strong>should</strong></span> add a <code class="literal">titleabbrev</code> attribute to the section:</p>
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">[id=intro_to_xyz,titleabbrev=" XYZ Intro"]
+== Intro to XYZ
+
+Words.</pre>
+</div>
+</li>
+<li class="listitem">
+<p>You <span class="strong strong"><strong>may</strong></span> use the pass block but it isn&#8217;t recommended:</p>
+<div class="pre_wrapper lang-asciidoc">
+<pre class="programlisting prettyprint lang-asciidoc">== Intro to XYZ
+++++
+&lt;titleabbrev&gt;XYZ Intro&lt;/titleabbrev&gt;
+++++
+
+Words.</pre>
+</div>
+</li>
+</ol>
+</div>
+</div>
+
+</div>
+<div class="navfooter">
+<span class="prev">
+<a href="asciidoc-guide.html">« Asciidoc Guide</a>
+</span>
+<span class="next">
+<a href="multi-part.html">Multi-part books »</a>
+</span>
+</div>
+</div>
+</body>
+</html>

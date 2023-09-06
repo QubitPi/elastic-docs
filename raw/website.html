@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Building all of the Elastic docs | Docs HOWTO | Elastic</title>
+<meta class="elastic" name="content" content="Building all of the Elastic docs | Docs HOWTO">
+
+<link rel="home" href="index.html" title="Docs HOWTO"/>
+<link rel="up" href="build.html" title="Building documentation"/>
+<link rel="prev" href="local.html" title="For a local repo"/>
+<link rel="next" href="pr-checks.html" title="Previewing the Elastic docs in pull requests"/>
+<meta class="elastic" name="product_version" content=""/>
+<meta class="elastic" name="product_name" content=""/>
+<meta class="elastic" name="website_area" content="documentation"/>
+<meta name="DC.type" content="Learn/Docs/"/>
+<meta name="DC.subject" content=""/>
+<meta name="DC.identifier" content=""/>
+</head>
+<body>
+<div id="content">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="/guide/">Elastic Docs</a></span>
+<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="index.html">Docs HOWTO</a></span>
+<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="build.html">Building documentation</a></span>
+</div>
+<div class="navheader">
+<span class="prev">
+<a href="local.html">« For a local repo</a>
+</span>
+<span class="next">
+<a href="pr-checks.html">Previewing the Elastic docs in pull requests »</a>
+</span>
+</div>
+<div class="chapter">
+<div class="titlepage"><div><div>
+<h2 class="title"><a id="website"></a>Building all of the Elastic docs<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+</div></div></div>
+<p>Building all of the docs runs a link checker to validate cross-document links.
+While it isn&#8217;t generally necessary, if you know the book you are working on
+has links to/from other books, you can build with <code class="literal">--all</code> to validate
+the links.</p>
+<div class="note admon">
+<div class="icon"></div>
+<div class="admon_content">
+<p>To build everything, you must have access to all of the repositories
+referenced in <code class="literal">conf.yaml</code>. If you don&#8217;t have the required access privileges,
+an error will occur during the cloning phase.</p>
+</div>
+</div>
+<p>To check links before you merge your changes:</p>
+<div class="olist orderedlist">
+<ol class="orderedlist">
+<li class="listitem">
+Make sure you have the branch with your changes checked out.
+</li>
+<li class="listitem">
+<p>Specify the branch you are targeting and the directory that contains your local clone
+with the <code class="literal">--sub_dir</code> option. For example, if you are working on changes that will be merged
+into the master branch of the <code class="literal">elasticsearch</code> repo, run:</p>
+<div class="pre_wrapper lang-bash">
+<pre class="programlisting prettyprint lang-bash">./docs/build_docs --all --target_repo git@github.com:elastic/built-docs.git \
+                  --open --keep_hash --sub_dir elasticsearch:master:./elasticsearch</pre>
+</div>
+</li>
+</ol>
+</div>
+<div class="note admon">
+<div class="icon"></div>
+<div class="admon_content">
+<p>If there are no outstanding changes in the <code class="literal">elasticsearch</code> directory
+      then this will build against the result of merging the last successful
+      docs build and the contents of <code class="literal">elasticsearch</code>. If there <span class="strong strong"><strong>are</strong></span>
+      outstanding changes then it&#8217;ll just build against the contents of
+      <code class="literal">elasticsearch</code>.</p>
+</div>
+</div>
+<p>To run a full build to mimic the website build, omit the <code class="literal">--sub_dir</code> and
+<code class="literal">--keep_hash</code> options:</p>
+<div class="pre_wrapper lang-bash">
+<pre class="programlisting prettyprint lang-bash">./build_docs --all --target_repo git@github.com:elastic/built-docs.git --open</pre>
+</div>
+<p>Running a full build for the first time can be slow (60 mins+) as the build needs to:</p>
+<div class="ulist itemizedlist">
+<ul class="itemizedlist">
+<li class="listitem">
+clone each repository
+</li>
+<li class="listitem">
+build the docs for each branch
+</li>
+</ul>
+</div>
+<p>Subsequent runs will pull any changes to the repos and only build the
+branches that have changed.</p>
+</div>
+<div class="navfooter">
+<span class="prev">
+<a href="local.html">« For a local repo</a>
+</span>
+<span class="next">
+<a href="pr-checks.html">Previewing the Elastic docs in pull requests »</a>
+</span>
+</div>
+</div>
+</body>
+</html>
