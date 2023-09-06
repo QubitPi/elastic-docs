@@ -9,10 +9,6 @@ This documentation build process is provided to the public purely for the
 purpose of testing documentation changes before submitting pull requests to
 the appropriate Elastic repository.
 
-The documents produced by this build process may be published only on
-https://www.elastic.co. They may not be published in any other form or
-on any other website without explicit permission.
-
 [[setup]]
 == Getting started
 
@@ -39,6 +35,18 @@ git clone git@github.com:elastic/docs.git
 
 You can test that everything is working correctly by building
 this README as follows:
+
+The following static resources needs to be fetched from Docker manually though:
+
+* styles.css
+* docs.js
+* jquery.js
+* fonts
+
+They are currently hosted at https://github.com/QubitPi/QubitPi/tree/gh-pages/elastic-docs/guide/static[my profile repo]
+
+To update those static resources manually, use the following command and copy & paste the contents from Docker container
+to https://github.com/QubitPi/QubitPi/tree/gh-pages/elastic-docs/guide/static[host server]
 
 [source,bash]
 ----------------------------
