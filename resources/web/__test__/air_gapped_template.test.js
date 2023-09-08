@@ -44,9 +44,9 @@ describe("air_gapped_template.html", () => {
      * the built-docs repo.
      */
     const compiledWebResources = [
-      "/guide/static/styles-v1.css",
-      "/guide/static/docs-v1.js",
-      "/guide/static/jquery.js"
+      "/QubitPi/elastic-docs/guide/static/styles-v1.css",
+      "/QubitPi/elastic-docs/guide/static/docs-v1.js",
+      "/QubitPi/elastic-docs/guide/static/jquery.js"
     ];
     /**
      * Resources that are statically served from the preview app.
