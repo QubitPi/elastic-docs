@@ -38,3 +38,5 @@ node_modules
 
 /conf.before.yaml
 /conf.after.yaml
+
+.idea/

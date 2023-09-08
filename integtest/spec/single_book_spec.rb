@@ -34,12 +34,12 @@ RSpec.describe 'building a single book' do
         end
         it 'has a link to the css' do
           expect(head).to include(<<~HTML)
-            <link rel="stylesheet" type="text/css" href="/guide/static/styles.css" />
+            <link rel="stylesheet" type="text/css" href="/QubitPi/elastic-docs/guide/static/styles.css" />
           HTML
         end
         it 'has a link to the js' do
           expect(contents).to include(<<~HTML)
-            <script type="text/javascript" src="/guide/static/docs.js"></script>
+            <script type="text/javascript" src="/QubitPi/elastic-docs/guide/static/docs.js"></script>
           HTML
         end
         it 'has the right language' do
