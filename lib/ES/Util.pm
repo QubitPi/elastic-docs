@@ -493,14 +493,14 @@ sub write_nginx_test_config {
     my $web_conf;
     if ( $watching_web ) {
         $web_conf = <<"CONF"
-    rewrite ^/guide/static/docs-v1\\.js(.*)\$ /guide/static/docs_js/index-v1.js\$1 last;
-    location ^~ /guide/static/jquery.js {
+    rewrite ^/QubitPi/elastic-docs/guide/static/docs-v1\\.js(.*)\$ /QubitPi/elastic-docs/guide/static/docs_js/index-v1.js\$1 last;
+    location ^~ /QubitPi/elastic-docs/guide/static/jquery.js {
       alias /node_modules/jquery/dist/jquery.js;
       types {
         application/javascript js;
       }
     }
-    location ^~ /guide/static/ {
+    location ^~ /QubitPi/elastic-docs/guide/static/ {
       proxy_pass http://0.0.0.0:1234;
     }
 CONF
@@ -692,7 +692,7 @@ sub start_web_resources_watcher {
     close STDIN;
     open( STDIN, "</dev/null" );
     exec( qw(/node_modules/parcel/bin/cli.js serve
-             --public-url /guide/static/
+             --public-url /QubitPi/elastic-docs/guide/static/
              --hmr-port 8001
              -d /tmp/parcel/
              resources/web/docs_js/index-v1.js resources/web/styles-v1.pcss) );
@@ -732,7 +732,7 @@ sub build_web_resources {
         # every docs build.
         say "Compiling web resources";
         run '/node_modules/parcel/bin/cli.js', 'build',
-            '--public-url', '/guide/static/',
+            '--public-url', '/QubitPi/elastic-docs/guide/static/',
             '--experimental-scope-hoisting', '--no-source-maps',
             '-d', $parcel_out,
             'resources/web/docs_js/index-v1.js', 'resources/web/styles-v1.pcss';

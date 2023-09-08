@@ -37,7 +37,7 @@
   font-style:  normal;
   font-weight: 300;
   font-display: swap;
-  src: url("Inter-Light-BETA.woff2") format("woff2"),
+  src: url("https://qubitpi.github.io/QubitPi/elastic-docs/guide/static/Inter-Light-BETA.8584b582.woff2") format("woff2"),
        url("Inter-Light-BETA.woff") format("woff");
 }
 @font-face {
@@ -54,7 +54,7 @@
   font-style:  normal;
   font-weight: 400;
   font-display: swap;
-  src: url("Inter-Regular.woff2") format("woff2"),
+  src: url("https://qubitpi.github.io/QubitPi/elastic-docs/guide/static/Inter-Regular.a56e8a51.woff2") format("woff2"),
        url("Inter-Regular.woff") format("woff");
 }
 @font-face {
@@ -71,7 +71,7 @@
   font-style:  normal;
   font-weight: 500;
   font-display: swap;
-  src: url("Inter-Medium.woff2") format("woff2"),
+  src: url("https://qubitpi.github.io/QubitPi/elastic-docs/guide/static/Inter-Medium.a2e978f6.woff2") format("woff2"),
        url("Inter-Medium.woff") format("woff");
 }
 @font-face {
@@ -88,7 +88,7 @@
   font-style:  normal;
   font-weight: 600;
   font-display: swap;
-  src: url("Inter-SemiBold.woff2") format("woff2"),
+  src: url("https://qubitpi.github.io/QubitPi/elastic-docs/guide/static/Inter-SemiBold.659c45d5.woff2") format("woff2"),
        url("Inter-SemiBold.woff") format("woff");
 }
 @font-face {
