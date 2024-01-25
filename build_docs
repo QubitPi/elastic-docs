@@ -311,6 +311,9 @@ def run_build_docs(args):
             mounted_path = mount_docs_repo_and_dockerify_path(sub_dir, sub_dir)
             build_docs_args.append("%s:%s:%s" % (
                     m.group('repo'), m.group('branch'), mounted_path))
+        elif arg == '--extra_docker_vol_mount':
+            mount_spec = args.next_arg_or_err()
+            docker_args.extend(['-v', mount_spec])
         arg = args.next_arg()
 
     # Mount alternatives used by the docs repo if there are any in case we have
