@@ -3,13 +3,12 @@
   <head>
     
 <meta charset="UTF-8">
-<title>Building documentation | Docs HOWTO | Elastic</title>
-<meta class="elastic" name="content" content="Building documentation | Docs HOWTO">
+<title>Global banners | Docs HOWTO | Elastic</title>
+<meta class="elastic" name="content" content="Global banners | Docs HOWTO">
 
 <link rel="home" href="index.html" title="Docs HOWTO"/>
-<link rel="up" href="index.html" title="Docs HOWTO"/>
-<link rel="prev" href="setup.html" title="Getting started"/>
-<link rel="next" href="local.html" title="For a local repo"/>
+<link rel="up" href="asciidoc-guide.html" title="Asciidoc Guide"/>
+<link rel="prev" href="tabbed-widgets.html" title="Tabbed widgets"/>
 <meta class="elastic" name="product_version" content=""/>
 <meta class="elastic" name="product_name" content=""/>
 <meta class="elastic" name="website_area" content="documentation"/>
@@ -105,37 +104,26 @@
 <div class="breadcrumbs">
 <span class="breadcrumb-link"><a href="/guide/">Elastic Docs</a></span>
 <span class="chevron-right">›</span><span class="breadcrumb-link"><a href="index.html">Docs HOWTO</a></span>
+<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="asciidoc-guide.html">Asciidoc Guide</a></span>
 </div>
 <div class="navheader">
 <span class="prev">
-<a href="setup.html">« Getting started</a>
+<a href="tabbed-widgets.html">« Tabbed widgets</a>
 </span>
 <span class="next">
-<a href="local.html">For a local repo »</a>
 </span>
 </div>
-<div class="part">
+<div class="chapter">
 <div class="titlepage"><div><div>
-<h1 class="title"><a id="build"></a>Building documentation<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h1>
+<h2 class="title"><a id="global-banners"></a>Global banners<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
 </div></div></div>
-<div class="openblock partintro">
-<div class="content">
-<p>The <code class="literal">build_docs</code> executable can be used to build the documentation
-from a locally checked out repository, or to build all the
-documentation that will be uploaded to the website.</p>
-</div>
-</div>
-
-
-
-
+<p>Add a banner to every page within a book by creating a <code class="literal">page_header.html</code> file. This file must live in the root of the documentation directory (i.e. the book&#8217;s <code class="literal">path</code> in <code class="literal">conf.yaml</code>) and is picked up by the doc build automatically. This file can include any valid HTML. An example can be seen <a href="https://github.com/elastic/apm-server/pull/6833/files" class="ulink" target="_top">here</a>.</p>
 </div>
 <div class="navfooter">
 <span class="prev">
-<a href="setup.html">« Getting started</a>
+<a href="tabbed-widgets.html">« Tabbed widgets</a>
 </span>
 <span class="next">
-<a href="local.html">For a local repo »</a>
 </span>
 </div>
 </div>
