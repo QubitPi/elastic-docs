@@ -1060,6 +1060,7 @@ sub command_line_opts {
         'open',
         'procs=i',
         'verbose',
+        'extra_docker_vol_mount'
     ];
 }
 
