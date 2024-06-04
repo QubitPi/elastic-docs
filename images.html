@@ -123,6 +123,7 @@
 in your repo, and included using a path relative
 to the document where the <code class="literal">image::</code> statement appears.</p>
 <div class="pre_wrapper lang-asciidoc">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-asciidoc">[[cat]]
 .A scaredy cat
 image::resources/readme/cat.jpg[Alt text]
@@ -143,6 +144,7 @@ A link to &lt;&lt;cat&gt;&gt;</pre>
 <p>The <code class="literal">width</code> and/or <code class="literal">height</code> of the image can be
 specified in pixels or as a percentage:</p>
 <div class="pre_wrapper lang-asciidoc">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-asciidoc">image::resources/readme/cat.jpg["Alt text",width=50]
 image::resources/readme/cat.jpg["Alt text",width="20%"]</pre>
 </div>
@@ -165,6 +167,7 @@ image::resources/readme/cat.jpg["Alt text",width="20%"]</pre>
 <p>Images are left-aligned by default, but they can
 be centred or right-aligned:</p>
 <div class="pre_wrapper lang-asciidoc">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-asciidoc">image::resources/readme/cat.jpg["Alt text",width=100,align="left"]
 image::resources/readme/cat.jpg["Alt text",width=100,align="right"]
 image::resources/readme/cat.jpg["Alt text",width=100,align="center"]</pre>
@@ -198,6 +201,7 @@ image::resources/readme/cat.jpg["Alt text",width=100,align="center"]</pre>
 </div>
 <p>You can activate it with:</p>
 <div class="pre_wrapper lang-asciidoc">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-asciidoc">[role="screenshot"]
 image::resources/readme/screenshot.png[A screenshot example]</pre>
 </div>
@@ -209,6 +213,7 @@ image::resources/readme/screenshot.png[A screenshot example]</pre>
 </div></div></div>
 <p>SVGs are also supported. Just use them like you would any other image:</p>
 <div class="pre_wrapper lang-asciidoc">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-asciidoc">image::resources/readme/example.svg[An example svg]</pre>
 </div>
 <p>Which looks like:</p>
@@ -225,11 +230,13 @@ image::resources/readme/screenshot.png[A screenshot example]</pre>
 </div></div></div>
 <p>You can add relative or absoloute links to your images with the following syntax:</p>
 <div class="pre_wrapper lang-asciidoc">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-asciidoc">image:./images/dynamic-config.svg[link=configuration.html#configuration-dynamic]</pre>
 </div>
 <p>Using internal link attributes is also supported, but the image must be inside the internal link syntax.
 It&#8217;s important to add a space on each side of the image tag. Without spaces, the image will not render.</p>
 <div class="pre_wrapper lang-asciidoc">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-asciidoc">&lt;&lt;configuration-dynamic, image:./images/dynamic-config.svg[] &gt;&gt;</pre>
 </div>
 </div>

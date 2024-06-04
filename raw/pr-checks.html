@@ -38,14 +38,17 @@
 <p>In most Elastic repositories, when you open a pull request that affects the documentation, it calculates which books are affected and creates a PR check to build them.</p>
 <p>If you need to re-run the check, add a comment like this:</p>
 <div class="pre_wrapper lang-bash">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-bash">@elasticmachine run docs build</pre>
 </div>
 <p>or</p>
 <div class="pre_wrapper lang-bash">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-bash">@elasticmachine, run elasticsearch-ci/docs</pre>
 </div>
 <p>To force <span class="strong strong"><strong>all</strong></span> versions of the documentation to be rebuilt (not just the calculated subset), add a comment like this:</p>
 <div class="pre_wrapper lang-bash">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-bash">@elasticmachine, run elasticsearch-ci/docs rebuild</pre>
 </div>
 </div>

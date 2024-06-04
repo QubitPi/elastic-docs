@@ -123,6 +123,7 @@
 All our docs are built as a <code class="literal">book</code>, and thus follow the
 layout for books.  The most basic structure is as follows:</p>
 <div class="pre_wrapper lang-asciidoc">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-asciidoc">= Book title                // level 0
 
 == Chapter title            // level 1
@@ -135,7 +136,7 @@ layout for books.  The most basic structure is as follows:</p>
 </div>
 <p>Usually this structure will be sufficient for most of your
 documentation needs. More complicated "books", such
-as the <a href="https://www.elastic.co/guide/en/elasticsearch/reference/8.12" class="ulink" target="_top">Elasticsearch Guide</a>,
+as the <a href="https://www.elastic.co/guide/en/elasticsearch/reference/8.13" class="ulink" target="_top">Elasticsearch Guide</a>,
 require a few additional elements, described on the
 following pages.</p>
 <div class="section">
@@ -146,6 +147,7 @@ following pages.</p>
 or HTML file.  You can control the name of the file
 by giving the header an ID, as follows:</p>
 <div class="pre_wrapper lang-asciidoc">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-asciidoc">[[intro-to-xyz]]
 == Intro to XYZ</pre>
 </div>
@@ -178,6 +180,7 @@ one of two ways:</p>
 <li class="listitem">
 <p>You <span class="strong strong"><strong>should</strong></span> add a <code class="literal">titleabbrev</code> attribute to the section:</p>
 <div class="pre_wrapper lang-asciidoc">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-asciidoc">[id=intro_to_xyz,titleabbrev=" XYZ Intro"]
 == Intro to XYZ
 
@@ -187,6 +190,7 @@ Words.</pre>
 <li class="listitem">
 <p>You <span class="strong strong"><strong>may</strong></span> use the pass block but it isn&#8217;t recommended:</p>
 <div class="pre_wrapper lang-asciidoc">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-asciidoc">== Intro to XYZ
 ++++
 &lt;titleabbrev&gt;XYZ Intro&lt;/titleabbrev&gt;

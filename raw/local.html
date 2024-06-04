@@ -40,6 +40,7 @@ out repository, and you want to check that they are building
 correctly, use <code class="literal">build_docs</code> with the <code class="literal">--doc</code> parameter to
 generate the HTML version of the docs:</p>
 <div class="pre_wrapper lang-bash">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-bash">cd path/to/your/repo
 ~/path/to/docs/repo/build_docs --doc /full/path/to/index.asciidoc</pre>
 </div>
@@ -54,6 +55,7 @@ For example, if you want to build the Elasticsearch Guide, refer to the
 <p>By default, the HTML docs are generated in <code class="literal">./html_docs</code>. You can
 change the output directory with the <code class="literal">--out</code> parameter:</p>
 <div class="pre_wrapper lang-bash">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-bash">build_docs --doc path/to/index.asciidoc --out output/dir/</pre>
 </div>
 <div class="warning admon">
@@ -72,6 +74,7 @@ point it at a directory that contains anything you are fond of.</p>
 <p>To view the generated docs in your web browser immediately after
 the build has finished, use the <code class="literal">--open</code> parameter:</p>
 <div class="pre_wrapper lang-bash">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-bash">build_docs --doc path/to/index.asciidoc --open</pre>
 </div>
 </div>
@@ -84,11 +87,13 @@ the build has finished, use the <code class="literal">--open</code> parameter:</
 part/chapter/section.  To generate all of the docs in a single
 file instead, use the <code class="literal">--single</code> parameter:</p>
 <div class="pre_wrapper lang-bash">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-bash">build_docs --doc path/to/index.asciidoc --single</pre>
 </div>
 <p>And if you want a table of contents added at the beginning
 of the single page output, add the <code class="literal">--toc</code> parameter:</p>
 <div class="pre_wrapper lang-bash">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-bash">build_docs --doc path/to/index.asciidoc --single --toc</pre>
 </div>
 <div class="note admon">
@@ -122,6 +127,7 @@ results in enormous pages. So we mostly chunk at the first <em>section</em> leve
 file, but must also be specified on the command line when building a single
 book:</p>
 <div class="pre_wrapper lang-bash">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-bash">build_docs --doc path/to/index.asciidoc --chunk 1</pre>
 </div>
 <div class="note admon">
@@ -140,6 +146,7 @@ book:</p>
 users to specify their preferred language or client. You can do this by passing
 <code class="literal">--alternatives</code> to the build like:</p>
 <div class="pre_wrapper lang-bash">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-bash">cd docs/
 ./build_docs --doc README.asciidoc --open \
     --alternatives console:js:integtest/readme_examples/js \

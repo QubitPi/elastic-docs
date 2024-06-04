@@ -142,6 +142,7 @@ Make sure you have the branch with your changes checked out.
 with the <code class="literal">--sub_dir</code> option. For example, if you are working on changes that will be merged
 into the master branch of the <code class="literal">elasticsearch</code> repo, run:</p>
 <div class="pre_wrapper lang-bash">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-bash">./docs/build_docs --all --target_repo git@github.com:elastic/built-docs.git \
                   --open --keep_hash --sub_dir elasticsearch:master:./elasticsearch</pre>
 </div>
@@ -161,6 +162,7 @@ into the master branch of the <code class="literal">elasticsearch</code> repo, r
 <p>To run a full build to mimic the website build, omit the <code class="literal">--sub_dir</code> and
 <code class="literal">--keep_hash</code> options:</p>
 <div class="pre_wrapper lang-bash">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-bash">./build_docs --all --target_repo git@github.com:elastic/built-docs.git --open</pre>
 </div>
 <p>Running a full build for the first time can be slow (60 mins+) as the build needs to:</p>

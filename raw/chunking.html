@@ -41,6 +41,7 @@ you may want the first level of <code class="literal">section</code>s to also ge
 new chunks.</p>
 <p>For example:</p>
 <div class="pre_wrapper lang-asciidoc">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-asciidoc">= 1st-level page                    // part
 
 == 2nd-level child page             // chapter
@@ -64,12 +65,14 @@ new chunks.</p>
 <p>To enable section chunking when building docs in a <a class="xref" href="local.html" title="For a local repo">local repository</a>,
 pass the <code class="literal">--chunk</code> parameter:</p>
 <div class="pre_wrapper lang-bash">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-bash">build_docs --doc path/to/index.asciidoc --chunk 1</pre>
 </div>
 <p>To enable section chunking when building docs <a class="xref" href="website.html" title="Building all of the Elastic docs">for the website</a>,
 add <code class="literal">chunk: 1</code> to the
 <a href="https://github.com/elastic/docs/blob/master/conf.yaml" class="ulink" target="_top"><code class="literal">conf.yaml</code></a> file in the <code class="literal">docs</code> repo.</p>
 <div class="pre_wrapper lang-yaml">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-yaml">contents:
     -
         title:      Elasticsearch Guide
@@ -103,6 +106,7 @@ the same page.</p>
 section header, to indicate that what follows isn&#8217;t
 a "real" header:</p>
 <div class="pre_wrapper lang-asciidoc">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-asciidoc">[[chapter-one]]
 == chapter              // new chunk
 

@@ -54,6 +54,7 @@ to remove <code class="literal">added</code>, <code class="literal">coming</code
 <p>Use inline notifications for small changes, such as
 the addition or deprecation of individual parameters.</p>
 <div class="pre_wrapper lang-asciidoc">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-asciidoc">[horizontal]
 `foo.bar`::   Does XYZ. added:[0.90.4]
 `foo.bar`::   Does XYZ. coming:[0.90.4]
@@ -124,6 +125,7 @@ Deprecated in 0.90.4.
 notes in the notifications which show up when the
 user hovers over it:</p>
 <div class="pre_wrapper lang-asciidoc">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-asciidoc">[horizontal]
 `foo.bar`::   Does XYZ. added:[0.90.4,Replaces `foo.baz`]
 `foo.bar`::   Does XYZ. coming:[0.90.4,Replaces `foo.baz`]
@@ -195,6 +197,7 @@ Deprecated in 0.90.4. Replaced by <code class="literal">foo.bar</code>
 <div class="admon_content">
 <p>If the details include a comma, you must use quotation marks. For example:</p>
 <div class="pre_wrapper lang-asciidoc">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-asciidoc">deprecated::[1.1.0,"Span started automatically by &lt;&lt;apm-start-span,apm.startSpan()&gt;&gt;"]</pre>
 </div>
 </div>
@@ -209,6 +212,7 @@ Deprecated in 0.90.4. Replaced by <code class="literal">foo.bar</code>
 section as <em>added</em>/<em>deleted</em>.  Notifications can just refer
 to the version in which the change was made:</p>
 <div class="pre_wrapper lang-asciidoc">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-asciidoc">==== New section
 
 added::[0.90.4]
@@ -273,6 +277,7 @@ Text about old functionality...</pre>
 <p>Or they can include extra text, including more
 Asciidoc markup:</p>
 <div class="pre_wrapper lang-asciidoc">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-asciidoc">[[new-section]]
 ==== New section
 

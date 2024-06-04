@@ -50,6 +50,7 @@ syntax highlighting, eg:</p>
 <p class="title"><strong>Example 14. A code block</strong></p>
 <div class="example-contents">
 <div class="pre_wrapper lang-asciidoc">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-asciidoc">.Optional title
 [source,js]
 ----------------------------------
@@ -60,6 +61,7 @@ syntax highlighting, eg:</p>
 </div>
 <p><strong>Optional title.</strong></p>
 <div class="pre_wrapper lang-js">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-js">{
     "query": "foo bar"
 }</pre>
@@ -87,6 +89,7 @@ footnote to a particular line of code:</p>
 <p class="title"><strong>Example 15. Code block with callouts</strong></p>
 <div class="example-contents">
 <div class="pre_wrapper lang-asciidoc">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-asciidoc">[source,js]
 ----------------------------------
 {
@@ -96,6 +99,7 @@ footnote to a particular line of code:</p>
 &lt;1&gt; Here's the explanation</pre>
 </div>
 <div class="pre_wrapper lang-js">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-js">{
     "query": "foo bar" <a id="CO4-1"></a><i class="conum" data-value="1"></i>
 }</pre>
@@ -124,16 +128,17 @@ footnote to a particular line of code:</p>
 snippet into a sequence of calls to the ubiquitous
 <a href="https://curl.se/" class="ulink" target="_top">curl</a> tool that work in the bash shell and copy it to
 the clipboard. Similarly, if the target of the snippet is Elasticsearch we also
-add a "View in Console" link will open the code snippet in Console.</p>
+add a "Try in Console" link will open the code snippet in Console.</p>
 <p>You enable it by setting the "language" of the snippet to a supported
 language. The options are "console" for Elasticsearch, "kibana" for Kibana,
 "ess" for Elasticsearch Service (Elastic&#8217;s official SaaS offering), and "ece"
 for Elastic Cloud Enterprise.</p>
 <p>For Elasticsearch do this:</p>
 <div class="example">
-<p class="title"><strong>Example 16. Code block with "Copy as curl" and "View in Console" link for Elasticsearch</strong></p>
+<p class="title"><strong>Example 16. Code block with "Copy as curl" and "Try in Console" link for Elasticsearch</strong></p>
 <div class="example-contents">
 <div class="pre_wrapper lang-asciidoc">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-asciidoc">[source,console]
 ----------------------------------
 GET /_search
@@ -147,6 +152,7 @@ GET /_search
 </div>
 <p>Which renders as:</p>
 <div class="pre_wrapper lang-console">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-console">GET /_search
 {
     "query": "foo bar" <a id="CO5-1"></a><i class="conum" data-value="1"></i>
@@ -177,6 +183,7 @@ GET /_search
 <p class="title"><strong>Example 17. Code block with "Copy as curl" link for Kibana</strong></p>
 <div class="example-contents">
 <div class="pre_wrapper lang-asciidoc">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-asciidoc">[source,kibana]
 ----------------------------------
 GET /
@@ -186,6 +193,7 @@ GET /
 </div>
 <p>Which renders as:</p>
 <div class="pre_wrapper lang-kibana">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-kibana">GET /</pre>
 </div>
 <div class="kibana_widget" data-snippet="snippets/2.kibana"></div>
@@ -194,6 +202,7 @@ GET /
 <p class="title"><strong>Example 18. Code block with "Copy as curl" link for Elasticsearch Service</strong></p>
 <div class="example-contents">
 <div class="pre_wrapper lang-asciidoc">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-asciidoc">[source,ess]
 ----------------------------------
 GET /
@@ -203,6 +212,7 @@ GET /
 </div>
 <p>Which renders as:</p>
 <div class="pre_wrapper lang-ess">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-ess">GET /</pre>
 </div>
 <div class="ess_widget" data-snippet="snippets/3.ess"></div>
@@ -211,6 +221,7 @@ GET /
 <p class="title"><strong>Example 19. Code block with "Copy as curl" link for Elastic Cloud Enterprise</strong></p>
 <div class="example-contents">
 <div class="pre_wrapper lang-asciidoc">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-asciidoc">[source,ece]
 ----------------------------------
 GET /
@@ -220,6 +231,7 @@ GET /
 </div>
 <p>Which renders as:</p>
 <div class="pre_wrapper lang-ece">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-ece">GET /</pre>
 </div>
 <div class="ece_widget" data-snippet="snippets/4.ece"></div>
@@ -232,6 +244,7 @@ with the language set to <code class="literal">console-response</code>. That wil
 <a class="xref" href="local.html#alternative_languages" title="Alternative languages for examples">alternative examples</a> to find the responses.
 Like this:</p>
 <div class="pre_wrapper lang-asciidoc">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-asciidoc">[source,console-result]
 ----------------------------------
 {
@@ -244,6 +257,7 @@ Like this:</p>
 </div>
 <p>Which should render as:</p>
 <div class="pre_wrapper lang-console-result">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-console-result">{
     "hits": {
         "total": { "value": 0, "relation": "eq" },
@@ -263,6 +277,7 @@ Like this:</p>
 they can be longer and contain more than just a paragraph.
 For instance:</p>
 <div class="pre_wrapper lang-asciidoc">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-asciidoc">[NOTE]
 =========================
 This note contains a list:
@@ -299,6 +314,7 @@ baz
 </div>
 <p>and some code</p>
 <div class="pre_wrapper lang-js">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-js">{ "query": "foo bar"}</pre>
 </div>
 </div>
@@ -312,6 +328,7 @@ baz
 <p>Sidebars are used to highlight a block of
 content that is outside the usual flow of text:</p>
 <div class="pre_wrapper lang-asciidoc">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-asciidoc">.Optional title
 **********************************
 So why does the `bulk` API have such a
@@ -337,6 +354,7 @@ all about it!</p>
 example.  The title, if any, is labelled as an example
 and numbered:</p>
 <div class="pre_wrapper lang-asciidoc">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-asciidoc">.My first example
 ========================================
 Text explaining the first example.
@@ -372,6 +390,7 @@ before and after it.</p>
 </div>
 <p>Examples can be made collapsible:</p>
 <div class="pre_wrapper lang-asciidoc">
+<div class="console_code_copy" title="Copy to clipboard"></div>
 <pre class="programlisting prettyprint lang-asciidoc">[%collapsible]
 .An example
 ====
