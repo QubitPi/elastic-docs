@@ -17,12 +17,6 @@
 <meta name="DC.identifier" content=""/>
 </head>
 <body>
-<div id="content">
-<div class="breadcrumbs">
-<span class="breadcrumb-link"><a href="/guide/">Elastic Docs</a></span>
-<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="index.html">Docs HOWTO</a></span>
-<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="build.html">Building documentation</a></span>
-</div>
 <div class="navheader">
 <span class="prev">
 <a href="build.html">« Building documentation</a>
@@ -31,9 +25,22 @@
 <a href="website.html">Building all of the Elastic docs »</a>
 </span>
 </div>
+<div class="book" lang="en">
+<div class="titlepage">
+<div class="breadcrumbs">
+<span class="breadcrumb-link"><a href="/guide/">Elastic Docs</a></span>
+<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="index.html">Docs HOWTO</a></span>
+<span class="chevron-right">›</span><span class="breadcrumb-link"><a href="build.html">Building documentation</a></span>
+</div>
+<div>
+<div><h1 class="title"><a id="id-1"></a>For a local repo</h1><a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></div>
+</div>
+<!--EXTRA-->
+</div>
+<div id="content">
 <div class="chapter">
 <div class="titlepage"><div><div>
-<h2 class="title"><a id="local"></a>For a local repo<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+<div class="position-relative"><h2 class="title"><a id="local"></a>For a local repo</h2><a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></div>
 </div></div></div>
 <p>When you are making changes to documentation in a locally checked
 out repository, and you want to check that they are building
@@ -50,7 +57,7 @@ For example, if you want to build the Elasticsearch Guide, refer to the
 <a href="https://github.com/elastic/docs/blob/master/doc_build_aliases.sh#L12" class="ulink" target="_top">Elasticsearch section</a> in <a href="https://github.com/elastic/docs/blob/master/doc_build_aliases.sh" class="ulink" target="_top"><code class="literal">doc_build_aliases.sh</code></a> file.</p>
 <div class="section">
 <div class="titlepage"><div><div>
-<h2 class="title"><a id="_specifying_a_different_output_dir"></a>Specifying a different output dir<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+<div class="position-relative"><h2 class="title"><a id="_specifying_a_different_output_dir"></a>Specifying a different output dir</h2><a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></div>
 </div></div></div>
 <p>By default, the HTML docs are generated in <code class="literal">./html_docs</code>. You can
 change the output directory with the <code class="literal">--out</code> parameter:</p>
@@ -69,7 +76,7 @@ point it at a directory that contains anything you are fond of.</p>
 
 <div class="section">
 <div class="titlepage"><div><div>
-<h2 class="title"><a id="_viewing_the_docs"></a>Viewing the docs<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+<div class="position-relative"><h2 class="title"><a id="_viewing_the_docs"></a>Viewing the docs</h2><a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></div>
 </div></div></div>
 <p>To view the generated docs in your web browser immediately after
 the build has finished, use the <code class="literal">--open</code> parameter:</p>
@@ -81,7 +88,7 @@ the build has finished, use the <code class="literal">--open</code> parameter:</
 
 <div class="section">
 <div class="titlepage"><div><div>
-<h2 class="title"><a id="_single_or_multi_page"></a>Single- or multi-page<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+<div class="position-relative"><h2 class="title"><a id="_single_or_multi_page"></a>Single- or multi-page</h2><a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></div>
 </div></div></div>
 <p>By default, the build process generates an HTML file per
 part/chapter/section.  To generate all of the docs in a single
@@ -107,7 +114,7 @@ where appropriate.</p>
 
 <div class="section">
 <div class="titlepage"><div><div>
-<h2 class="title"><a id="_chunking_in_the_right_place"></a>Chunking in the right place<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+<div class="position-relative"><h2 class="title"><a id="_chunking_in_the_right_place"></a>Chunking in the right place</h2><a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></div>
 </div></div></div>
 <p>Before Christmas 2019 we built all of the docs using
 <a href="https://tdg.docbook.org/tdg/4.5/" class="ulink" target="_top">docbook</a> which is designed to generate
@@ -140,7 +147,7 @@ book:</p>
 
 <div class="section">
 <div class="titlepage"><div><div>
-<h2 class="title"><a id="alternative_languages"></a>Alternative languages for examples<a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></h2>
+<div class="position-relative"><h2 class="title"><a id="alternative_languages"></a>Alternative languages for examples</h2><a class="edit_me" rel="nofollow" title="Edit this page on GitHub" href="https://github.com/QubitPi/elastic-docs/edit/master/README.asciidoc">edit</a></div>
 </div></div></div>
 <p>The build supports finding "alternative languages" for examples that allows
 users to specify their preferred language or client. You can do this by passing
@@ -155,14 +162,14 @@ users to specify their preferred language or client. You can do this by passing
 </div>
 
 </div>
-<div class="navfooter">
+</div>
+</div><div class="navfooter">
 <span class="prev">
 <a href="build.html">« Building documentation</a>
 </span>
 <span class="next">
 <a href="website.html">Building all of the Elastic docs »</a>
 </span>
-</div>
 </div>
 </body>
 </html>
