@@ -66,10 +66,10 @@ this README as follows:</p>
 <div class="ulist itemizedlist">
 <ul class="itemizedlist">
 <li class="listitem">
-styles.css
+styles.css (now it&#8217;s style-v1.css, looks like a temp file by upstream, might change in the fugure)
 </li>
 <li class="listitem">
-docs.js
+docs.js (now it&#8217;s docs-v1.js, looks like a temp file by upstream, might change in the fugure)
 </li>
 <li class="listitem">
 jquery.js
@@ -81,11 +81,11 @@ fonts
 </div>
 <p>They are currently hosted at <a href="https://github.com/QubitPi/QubitPi/tree/gh-pages/elastic-docs/guide/static" class="ulink" target="_top">my profile repo</a></p>
 <p>To update those static resources manually, use the following command and copy &amp; paste the contents from Docker container
-to <a href="https://github.com/QubitPi/QubitPi/tree/gh-pages/elastic-docs/guide/static" class="ulink" target="_top">host server</a></p>
+to <a href="https://github.com/QubitPi/QubitPi/tree/gh-pages/elastic-docs/guide/static" class="ulink" target="_top">host server</a> or simply download it from
+container&#8217;s running <a href="http://localhost:8000" class="ulink" target="_top">http://localhost:8000</a></p>
 <div class="pre_wrapper lang-bash">
 <div class="console_code_copy" title="Copy to clipboard"></div>
-<pre class="programlisting prettyprint lang-bash">cd docs/
-./build_docs --doc README.asciidoc --open</pre>
+<pre class="programlisting prettyprint lang-bash">./build_docs --doc README.asciidoc --open</pre>
 </div>
 <p>This should convert <code class="literal">README.asciidoc</code> into HTML and open it
 in your browser.</p>
