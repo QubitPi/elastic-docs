@@ -40,19 +40,19 @@ this README as follows:
 
 The following static resources needs to be fetched from Docker manually though:
 
-* styles.css
-* docs.js
+* styles.css (now it's style-v1.css, looks like a temp file by upstream, might change in the fugure)
+* docs.js (now it's docs-v1.js, looks like a temp file by upstream, might change in the fugure)
 * jquery.js
 * fonts
 
 They are currently hosted at https://github.com/QubitPi/QubitPi/tree/gh-pages/elastic-docs/guide/static[my profile repo]
 
 To update those static resources manually, use the following command and copy & paste the contents from Docker container
-to https://github.com/QubitPi/QubitPi/tree/gh-pages/elastic-docs/guide/static[host server]
+to https://github.com/QubitPi/QubitPi/tree/gh-pages/elastic-docs/guide/static[host server] or simply download it from
+container's running http://localhost:8000
 
 [source,bash]
 ----------------------------
-cd docs/
 ./build_docs --doc README.asciidoc --open
 ----------------------------
 
